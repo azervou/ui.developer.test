@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Some Web Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.min.css" type="text/css"> 
+    
+  </head>
+  <body>
+      <!-- Header -->
+      <header>
+        <nav class="navbar">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <div class="brand-centered">
+                  <a class="navbar-brand" href="#">
+                      <img src="img/logo.png" alt="logo">
+                  </a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a class="login-button" href="#">LOGIN</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </header>
+      <div class="landing-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 landing-section-main">
+                    <h1>Title Text</h1>
+                    <div class="description">
+                        <p>We have been working very hard to create the new version of our web app.</p>
+                    </div>
+                    <div>
+                        <form id="landing-section-form" class="form-inline" role="form" action="search.html?" method="GET">
+                          <div class="form-group">
+                            <label for="inputFirstName" data-html="true" data-toggle="tooltip" title="">FIRST NAME</label>
+                            <input id="inputFirstName" type="text" class="form-control" name="firstName" placeholder="e.g. John" name="firstname" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="inputLastName">LAST NAME:</label>
+                            <input id="inputLastName" type="text" class="form-control" name="lastName" placeholder="e.g. Smith" required>
+                          </div>
+                          <div class="form-group select-field">
+                            <label for="selectState">STATE:</label>
+                            <select id="selectState" class="form-control" name="selectState">
+                              <option>All States</option>
+                              <option>New York</option>
+                              <option>Los Angeles</option>
+                              <option>Chicago</option>
+                              <option>Atlanta</option>
+                            </select>
+                          </div>
+                          <button type="submit" class="btn btn-success">Search</button>
+                        </form>
+                        <p class="secure-icon">This secure connection is confirmed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    <!-- jQuery first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- jquery validator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+      <!-- custom js -->
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Some Web Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.min.css" type="text/css"> 
+    
+  </head>
+  <body>
+      <!-- Header -->
+      <header>
+        <nav class="navbar">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+                <div class="brand-centered">
+                  <a class="navbar-brand" href="index.html">
+                      <img src="img/logo.png" alt="Logo">
+                  </a>
+                </div>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">CONTACT</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a class="login-button" href="#">LOGIN</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+      </header>
+      <div class="search-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+                    <div id="loading-bar">
+                        <div id="loading-bar-filled">25%</div>
+                    </div>
+                    <button id="open-report" class="btn btn-success">Open Report</button>
+                    <div class="box-section">
+                        <div class="form-inline">
+                          <div class="form-group">
+                            <label for="searchSubject">Search Subject</label>
+                            <input type="text" class="form-control" id="searchSubject">
+                          </div>
+                          <div class="form-group">
+                            <label for="ajaxId">AJAX ID</label>
+                            <input type="text" class="form-control" id="ajaxId">
+                          </div>
+                          <div class="form-group">
+                            <label for="ajaxName">AJAX Name</label>
+                            <input type="text" class="form-control" id="ajaxName">
+                          </div>
+                          <div class="form-group">
+                            <label for="ajaxEmail">AJAX Email</label>
+                            <input type="text" class="form-control" id="ajaxEmail">
+                          </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    <!-- jQuery first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- jquery validator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <!-- custom js -->
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
