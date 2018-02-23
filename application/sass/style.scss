@@ -10,6 +10,9 @@
     text-transform: uppercase;
 }
 
+body{
+    font-family: 'Raleway', sans-serif;
+}
 /********* INDEX ***********/
 /** navbar section **/
 .navbar{
@@ -28,6 +31,14 @@
     }
     .navbar-nav{
         padding: 15px 0px;
+        .login-button{
+            background-color: #1ca4fc;
+            color: #ffffff;
+            &:hover, &:active{
+                background-color: #ffffff!important;
+                color: #1ca4fc;
+            }
+        }
         &>li{
             margin-left: 2px;
             &>a{
@@ -37,7 +48,7 @@
                 font-size: 19px;
                 line-height: 24px;
                 &:hover, &:active{
-                    background-color: transparent;
+                    background-color: #eee;
                 }
             }
         }
@@ -109,11 +120,15 @@
             font-size: 20px;
             display: block;
             text-align: left;
-            font-weight: normal;
+            font-weight: bold;
             float: left;
+            &.error{
+                background-color: #f44336;
+                padding: 5px;
+            }
         }
         .error{
-            color: #f44336;
+            color: #ffffff;
             font-size: 14px;
             width: 100%;
         }
@@ -173,11 +188,12 @@
     -o-background-size: cover;
     background-size: cover;
 }
-.box-section{
+.box-section, .box-section-no-results{
     text-align: center;
     background-color: #ffffff;
     padding: 25px;
-    margin: 40px 0 20px 0;
+    margin: 25px 0 20px 0;
+    display: none;
     .form-inline{
         padding: 20px;
         -webkit-box-shadow: 0px 0px 8px 10px #afd3e6;
@@ -188,10 +204,9 @@
             display: inline-block;
             width: 44px;
             height: 44px;
-            top: 5px;
-            position: relative;
-            top: 20px;
-            float: right;
+            position: absolute;
+            top: 35px;
+            right: 20px;
             background: url(../img_min/sprite.png) -16px -188px;
         }
         .form-group {
@@ -208,21 +223,48 @@
             }
             .form-control {
                 box-shadow: none;
+                padding: 0;
+                font-size: 19px;
+                color: #333;
             }
+        }
+    }
+    .box-section-main{
+        padding: 20px;
+        -webkit-box-shadow: 0px 0px 8px 10px #afd3e6;
+        -moz-box-shadow: 0px 0px 8px 10px #afd3e6;
+        box-shadow: 0px 0px 8px 10px #afd3e6;
+        &:before{
+            content: "";
+            display: block;
+            margin: 0 auto;
+            width: 77px;
+            height: 77px;
+            position: relative;
+            top: 15px;
+            background: url(../img_min/sprite.png) -12px -288px;
+        }
+        h2{
+            margin: 40px 0 30px 0;
+        }
+        a{
+            width: 100%;
+            display: block;
         }
     }
 }
 #loading-bar {
     width: 100%;
     background-color: #dddddd;
-    margin-top: 15px;
+//    margin-top: 15px;
+    margin: 30px 0;
     #loading-bar-filled {
-        width: 25%;
+        width: 0;
         height: 70px;
         background-color: #81cf78;
         text-align: right;
-        font-size: 25px;
-        padding: 17px 0;
+        font-size: 30px;
+        padding: 15px 0;
         color: #ffffff;
     }
 }
@@ -230,11 +272,11 @@
     display: none;
     @include btn-success(100%);
     border-radius: 15px;
-    height: 70px;
-    margin-top: 16px;
+    margin-top: 30px;
+    padding: 19px 12px;
 }
 /** Small devices ( 395px and up)**/
-@media (min-width: 395px) { 
+@media (min-width: 440px) { 
     .box-section{
         .form-inline{
             .form-group label {
@@ -288,6 +330,7 @@
         .secure-icon{
             width: 100%;
             float: left;
+            margin: 0 0 15px 0!important;
         }
     }
     /** search form **/
@@ -306,7 +349,7 @@
             .tooltip.top{
                 padding: 5px 0;
                 opacity: 1;
-                font-size: 16px;
+                font-size: 18px;
                 width: 74%;
                 left: 0!important;
                 .tooltip-arrow{

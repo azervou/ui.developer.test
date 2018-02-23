@@ -52,15 +52,15 @@ function getURLParameters(){
 
     if(ajaxParameter){
         //call ajaxCall with firstName and lastName as parameter every 5 sec
-        setInterval(ajaxCall(ajaxParameter.trim()), 5 * 1000);
+        ajaxCall($.trim(ajaxParameter));
     }
     return textField;
 }
 
 //fill progress bar when ajaxCall is success
 function move() {
-  var width = 25;
-  var id = setInterval(frame, 10);
+  var width = 0;
+  var id = setInterval(frame, 150);
   function frame() {
     if (width >= 100) {
       clearInterval(id);
@@ -86,13 +86,27 @@ function ajaxCall(name) {
     contentType: 'application/json; charset=utf-8',
     success:function(data) {
         if($.trim(data)){
-           $('#ajaxId').val(data[0].id);
-            $('#ajaxName').val(data[0].name);
-            $('#ajaxEmail').val(data[0].email);
+            $('.box-section').show();
             move();
+            new Promise(function(resolve, reject) { 
+                // A mock async action using setTimeout
+                setTimeout(function() { $('#ajaxId').val(data[0].id); resolve(); }, 5 * 1000);
+            }).then(function() { 
+                setTimeout(function() { $('#ajaxName').val(data[0].name); }, 5 * 1000);
+            }).then(function() { 
+                setTimeout(function() { $('#ajaxEmail').val(data[0].email); }, 10 * 1000);
+            });
+        }else{
+            $('#loading-bar-filled').width('100%'); 
+            $('#loading-bar-filled').text('100%');
+            $('.box-section-no-results').show();
         }
     },
     error: function (textStatus, errorThrown) {
+        $('#loading-bar-filled').width('100%');
+        $('#loading-bar-filled').text('100%');
+        $('.box-section-no-results h2').text('Network error');
+        $('.box-section-no-results').show();
         console.log(errorThrown);
     }
   });
